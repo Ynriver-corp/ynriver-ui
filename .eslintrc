@@ -26,7 +26,7 @@
       "always"
     ],
     "prettier/prettier": "warn",
-    "@typescript-eslint/no-explicit-any": ["error", { fixToUnknown: true }],
+    "@typescript-eslint/no-explicit-any": ["error", { "fixToUnknown": true }],
     "react-hooks/exhaustive-deps": "warn",
     "react-hooks/rules-of-hooks": "error",
     "@typescript-eslint/no-non-null-assertion": "off",
