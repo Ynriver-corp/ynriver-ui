@@ -2,10 +2,10 @@
   "root": true,
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "@typescript-eslint",
-    "prettier",
     "react",
-    "react-hooks"
+    "prettier",
+    "react-hooks",
+    "@typescript-eslint"
   ],
   "extends": [
     "prettier",
