@@ -1,0 +1,54 @@
+{
+  "name": "ynriver-ui",
+  "version": "1.0.0",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "linte": "eslint --cache . --fix",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json",
+    "prepare": "husky install",
+    "prepublishOnly": "npm run prettier && npm run lint"
+  },
+  "homepage": "https://github.com/Ynriver-corp/ynriver-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ynriver-corp/ynriver-ui.git"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "react-datepicker": "^4.16.0",
+    "react-select": "^5.7.4"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.5.1",
+    "@types/react": "^18.2.20",
+    "@types/react-datepicker": "^4.15.0",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  }
+}
